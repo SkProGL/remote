@@ -1,4 +1,6 @@
 import os
+import subprocess
+
 VS_ROOT = r"C:\Program Files\Microsoft Visual Studio\2022\Professional"
 # MSVC_VER = "14.44.35207"
 MSVC_BASE = os.path.join(VS_ROOT, r"VC\Tools\MSVC")
@@ -43,5 +45,14 @@ os.environ["LIB"] = ";".join([
 os.environ["CC"] = "cl"
 os.environ["CXX"] = "cl"
 
-print(MSVC_VER)
-print(WINSDK_VER)
+# update current process
+os.environ["CUSTOM_MSVC"] = MSVC_VER
+os.environ["CUSTOM_WINSDK"] = WINSDK_VER
+# make permanent
+subprocess.run(["setx", "CUSTOM_MSVC", MSVC_VER])
+subprocess.run(["setx", "CUSTOM_WINSDK", WINSDK_VER])
+
+# print(MSVC_VER)
+# print(WINSDK_VER)
+print(os.environ["CUSTOM_MSVC"])
+print(os.environ["CUSTOM_WINSDK"])
