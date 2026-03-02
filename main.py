@@ -1,5 +1,4 @@
 import os
-# cd C:\Users\g2-leonovs; curl.exe -L "https://github.com/SkProGL/remote/archive/refs/heads/main.zip" -o repo.zip; Expand-Archive repo.zip -Force; del repo.zip; cd repo/remote-main; .\setup.bat
 VS_ROOT = r"C:\Program Files\Microsoft Visual Studio\2022\Professional"
 # MSVC_VER = "14.44.35207"
 MSVC_BASE = os.path.join(VS_ROOT, r"VC\Tools\MSVC")
