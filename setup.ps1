@@ -7,7 +7,7 @@ python main.py
 $env:CUSTOM_MSVC = [Environment]::GetEnvironmentVariable("CUSTOM_MSVC","User")
 $env:CUSTOM_WINSDK = [Environment]::GetEnvironmentVariable("CUSTOM_WINSDK","User")
 mkdir C:\Users\g2-leonovs\AppData\Roaming\rclone
-cp rclone.conf C:\Users\g2-leonovs\AppData\Roaming\rclone\rclone.conf
+Copy-Item .\rclone.conf "C:\Users\g2-leonovs\AppData\Roaming\rclone\rclone.conf" -Force
 
 echo "Turn off password"
 rclone\rclone.exe config
