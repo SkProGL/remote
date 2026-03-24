@@ -6,10 +6,10 @@ cd C:\Users\g2-leonovs; Remove-Item .\bdh -Recurse -Force -ErrorAction SilentlyC
 
 Get repo
 ```powershell
-cd C:\Users\g2-leonovs; curl.exe -L "https://github.com/SkProGL/experimental_dragon_hatchling/archive/refs/heads/main.zip" -o bdh.zip; Expand-Archive bdh.zip -Force; del bdh.zip; Move-Item .\bdh\experimental_dragon_hatchling-main .\repo\remote-main\ -Force; cd .\repo\remote-main\experimental_dragon_hatchling-main; .\setup.ps1; .\start.ps1;
+cd C:\Users\g2-leonovs; curl.exe -L "https://github.com/SkProGL/experimental_dragon_hatchling/archive/refs/heads/main.zip" -o bdh.zip; Expand-Archive bdh.zip -Force; del bdh.zip; Move-Item .\bdh\experimental_dragon_hatchling-main .\repo\remote-main\ -Force; cd .\repo\remote-main\experimental_dragon_hatchling-main; .\setup.ps1;
 ```
 
 
 ```powershell
-cd C:\Users\g2-leonovs\repo\remote-main\experimental_dragon_hatchling-main; ..\.venv\Scripts\activate; .\start.ps1;
+cd C:\Users\g2-leonovs\; .\.venv\Scripts\activate; cd repo\remote-main\experimental_dragon_hatchling-main; .\setup.ps1;
 ```
