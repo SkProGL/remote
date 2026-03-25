@@ -17,5 +17,6 @@ if (-not (Test-Path $target)) {
     Copy-Item .\rclone.conf $target -Force
     rclone\rclone.exe config
 }
-
+echo '[rclone] remote contents'
+.\rclone\rclone.exe lsf gdrive:results
 echo "done."
